@@ -1,0 +1,7 @@
+gpg --full-gen-key
+gpg --list-keys
+echo 'David Eduardo Batista Trujillo' > mensaje_secreto.txt
+gpg --armor --export batista.eduardo.mat@gmail.com > llave_publica.asc
+gpg --encrypt mensaje_secreto.txt
+gpg --decrypt mensaje_secreto.txt.gpg > desencriptado.txt
+pgp --import llave_publica
